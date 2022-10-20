@@ -1,7 +1,7 @@
 function updateCaseNumber(isIncreased) {
   const previousCaseValue = document.getElementById("case-number-field").value;
   const previousCaseString = parseInt(previousCaseValue);
-  console.log(previousCaseValue);
+
   let newCaseNumber;
 
   if (isIncreased == true) {
@@ -17,12 +17,15 @@ function updateCaseTotalPrice(newCaseNumber) {
   const caseTotalPrice = newCaseNumber * 59;
   document.getElementById("caseTotalPrice").innerText = caseTotalPrice;
 }
+
 // Case Count Increase
 document.getElementById("btn-case-plus").addEventListener("click", function () {
   const newCaseNumber = updateCaseNumber(true);
 
   updateCaseTotalPrice(newCaseNumber);
+  calculateSubTotal();
 });
+
 // case Count decrease
 document
   .getElementById("btn-case-minus")
@@ -30,4 +33,5 @@ document
     const newCaseNumber = updateCaseNumber(false);
 
     updateCaseTotalPrice(newCaseNumber);
+    calculateSubTotal();
   });

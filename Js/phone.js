@@ -18,6 +18,7 @@ function updatePhoneTotalPrice(newPhoneNumber) {
   const phoneTotalPrice = newPhoneNumber * 1219;
   document.getElementById("phoneTotalPrice").innerText = phoneTotalPrice;
 }
+
 // Phone Count Increase
 document
   .getElementById("btn-phone-plus")
@@ -25,7 +26,9 @@ document
     const newPhoneNumber = updatePhoneNumber(true);
 
     updatePhoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
   });
+
 // Phone Count decrease
 document
   .getElementById("btn-phone-minus")
@@ -33,4 +36,5 @@ document
     const newPhoneNumber = updatePhoneNumber(false);
 
     updatePhoneTotalPrice(newPhoneNumber);
+    calculateSubTotal();
   });
