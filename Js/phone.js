@@ -1,14 +1,14 @@
 function updatePhoneNumber(isIncreased) {
   const previousPhoneValue =
     document.getElementById("phone-number-field").value;
-  previousValueString = parseInt(previousPhoneValue);
-
+  const previousPhoneString = parseInt(previousPhoneValue);
+  console.log(previousPhoneValue);
   let newPhoneNumber;
 
   if (isIncreased == true) {
-    newPhoneNumber = previousValueString + 1;
+    newPhoneNumber = previousPhoneString + 1;
   } else {
-    newPhoneNumber = previousValueString - 1;
+    newPhoneNumber = previousPhoneString - 1;
   }
   document.getElementById("phone-number-field").value = newPhoneNumber;
   return newPhoneNumber;
@@ -16,7 +16,7 @@ function updatePhoneNumber(isIncreased) {
 
 function updatePhoneTotalPrice(newPhoneNumber) {
   const phoneTotalPrice = newPhoneNumber * 1219;
-  document.getElementById("totalPhonePrice").innerText = phoneTotalPrice;
+  document.getElementById("phoneTotalPrice").innerText = phoneTotalPrice;
 }
 // Phone Count Increase
 document
