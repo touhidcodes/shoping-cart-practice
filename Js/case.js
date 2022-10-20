@@ -35,3 +35,14 @@ document
     updateCaseTotalPrice(newCaseNumber);
     calculateSubTotal();
   });
+
+document.getElementById("remove-case").addEventListener("click", function () {
+  const resetUniversal = 0;
+  const closeCase = 1219;
+
+  document.getElementById("case-number-field").value = resetUniversal;
+  document.getElementById("caseTotalPrice").innerText = resetUniversal;
+
+  document.getElementById("sub-total").innerText = closeCase;
+  document.getElementById("final-total").innerText = closeCase;
+});

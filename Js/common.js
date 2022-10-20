@@ -17,6 +17,7 @@ function calculateSubTotal() {
   const currentSubTotal = currentPhoneTotal + currentCaseTotal;
   setTextElementValueById("sub-total", currentSubTotal);
   console.log(currentSubTotal);
+
   // calculate tax
   const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
   const taxAmount = parseFloat(taxAmountString);
@@ -25,8 +26,3 @@ function calculateSubTotal() {
   const finalAmount = currentSubTotal + taxAmount;
   setTextElementValueById("final-total", finalAmount);
 }
-
-// document.getElementById("remove").addEventListener("click", function () {
-//   const constValuePhone = document.getElementById("totalPhonePrice");
-
-// });
